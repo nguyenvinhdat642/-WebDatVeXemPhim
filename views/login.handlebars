@@ -1,0 +1,62 @@
+<h3 class="text-center my-5 text-light">Đăng nhập</h3>
+  <div class="container">
+    <form method="POST" action="/account/login">
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example1">Tên đăng nhập</label>
+    <input name="email"type="text" id="form2Example1" class="form-control" />
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example2">Mật khẩu</label>
+    <input name="pwd"type="password" id="form2Example2" class="form-control" />
+  </div>
+
+  <!-- 2 column grid layout for inline styling -->
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+      <!-- Checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="form2Example31" />
+        <label class="form-check-label" for="form2Example31"> Lưu thông tin </label>
+      </div>
+    </div>
+
+    <div class="col">
+      <!-- Simple link -->
+      <a href="#!">Quên mật khẩu?</a>
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  {{#if flash}}
+  <div id="flash-alert" class="alert alert-success text-center w-25 mx-auto my-3">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <span>{{flash.error}}</span>
+  </div>
+  {{/if}}
+  <button type="submit"style="background:red;" class="btn btn-block mb-4">Đăng nhập</button>
+  <!-- Flash message -->
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Chưa là thành viên? <a href="/account/register">Đăng ký</a></p>
+    <p>Hoặc đăng ký với:</p>
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fa fa-facebook" style="color:red;"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fa fa-google" style="color:red;"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fa fa-twitter" style="color:red;"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fa fa-github" style="color:red;"></i>
+    </button>
+  </div>
+</form>
+  </div>

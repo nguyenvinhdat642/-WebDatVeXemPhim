@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quản trị đặt vé phim</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #23272b;
+            color: #f8f9fa;
+        }
+        
+        h1 {
+            color: #f8f9fa;
+        }
+        
+        .form-group label {
+            color: #f8f9fa;
+        }
+        
+        .form-control {
+            background-color: #343a40;
+            color: #f8f9fa;
+            border-color: #343a40;
+        }
+        
+        .form-control:focus {
+            background-color: #495057;
+            color: #f8f9fa;
+            border-color: #343a40;
+            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+        }
+        
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #f8f9fa;
+            border-color: #007bff;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+            color: #f8f9fa;
+            border-color: #0062cc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Chỉnh sửa thông tin phim</h1>
+        <form action="/Movie/edit" method="POST">
+            <input type="hidden" id="Id" name="Id" value="{{movie.id}}">
+            <!-- Thêm trường ẩn để chứa giá trị của Id -->
+            <div class="form-group">
+                <label for="TenPhim">Tên phim:</label>
+                <input type="text" id="TenPhim" name="TenPhim" value="<%= movie.TenPhim %>" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="ThoiLuong">Thời lượng (phút):</label>
+                <input type="number" id="ThoiLuong" name="ThoiLuong" value="<%= movie.ThoiLuong %>" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="TomTat">Tóm tắt:</label>
+                <textarea id="TomTat" name="TomTat" rows="4" cols="50" required class="form-control">{{movie.TomTat}}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="DinhDang">Định dạng:</label>
+                <input type="text" id="DinhDang" name="DinhDang" value="{{movie.DinhDang}}" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Trailer">Trailer:</label>
+                <input type="text" id="Trailer" name="Trailer" value="{{movie.Trailer}}" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Poster">Poster:</label>
+                <input type="text" id="Poster" name="Poster" value="{{movie.Poster}}" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Rating">Đánh giá:</label>
+                <input type="number" id="Rating" name="Rating" step="0.1" min="0" max="10" value="{{movie.Rating}}" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="NgayKhoiChieu">Ngày khởi chiếu:</label>
+                <input type="date" id="NgayKhoiChieu" name="NgayKhoiChieu" value="{{movie.NgayKhoiChieu}}" required class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Lưu</button>
+            <!-- Thêm button để gửi form kèm Id -->
+        </form>
+    </div>
+
+</body>
+
+</html>

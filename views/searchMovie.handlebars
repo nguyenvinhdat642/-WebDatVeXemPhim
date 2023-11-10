@@ -1,0 +1,123 @@
+{{!-- ============================================================================================== --}}
+        <section id="trend" class="pt-4 pb-5">
+            <div class="container">
+                <div class="row trend_1">
+                    <div class="col-md-6 col-6">
+                        <div class="trend_1l">
+                            <h4 class="mb-0">
+                                <i
+                                    class="fa fa-youtube-play align-middle col_red me-1"
+                                ></i>
+                                Phim <span class="col_red">Đang Chiếu</span>
+                            </h4>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row trend_2 mt-4">
+                    <div
+                        id="carouselExampleCaptions1"
+                        class="carousel slide"
+                        data-bs-ride="carousel"
+                    >
+                        
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="trend_2i row">
+                                    {{#if notFound}}
+                                    <div class = "col-md-4 col-6">{{notFound}}</div>
+                                        
+                                    {{/if}}
+                                    {{#each data}}
+                                    <div class="col-md-4 col-6">
+                                        
+                                        <div
+                                            class="trend_2im clearfix position-relative"
+                                        >
+                                            <div class="trend_2im1 clearfix">
+                                                <div class="grid">
+                                                    <figure
+                                                        class="effect-jazz mb-0"
+                                                    >
+                                                        <a href="#"
+                                                            ><img
+                                                                src="{{this.Poster}}"
+                                                                class="w-100"
+                                                                alt="img25"
+                                                        /></a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="trend_2im2 clearfix text-center position-absolute w-100 top-0"
+                                            >
+                                                <span class="fs-1"
+                                                    ><a class="col_red" href="{{this.Trailer}}" target="_blank"
+                                                        ><i
+                                                            class="fa fa-youtube-play"
+                                                        ></i></a
+                                                ></span>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="trend_2ilast bg_grey p-3 clearfix"
+                                        >
+                                            <h6>
+                                                <a class="col_red" href="/booking/detail?id={{this.MaPhim}}" data-id = "{{this.MaPhim}}"
+                                                    >{{this.TenPhim}}</a
+                                                >
+                                            </h6>
+                                             
+                                            {{!-- <p class="mb-2">
+                                                {{this.TomTat}}
+                                            </p> --}}
+                                           
+                                            <a
+                                    class="button "
+                                    href="/booking/ticket?idMovie={{this.MaPhim}}"
+                                    
+                                    ><i
+                                        class="align-middle me-1"
+                                    ></i>
+                                    Đặt vé</a
+                                ><span class="col_red">
+                                                
+                                                {{this.Rating}}/10
+                                            </span>
+                                        </div>
+                                        
+                                    </div>
+                                    {{/each}}
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+        <script>
+            window.onscroll = function () {
+                myFunction();
+            };
+
+            var navbar_sticky = document.getElementById("navbar_sticky");
+            var sticky = navbar_sticky.offsetTop;
+            var navbar_height = document.querySelector(".navbar").offsetHeight;
+
+            function myFunction() {
+                if (window.pageYOffset >= sticky + navbar_height) {
+                    navbar_sticky.classList.add("sticky");
+                    document.body.style.paddingTop = navbar_height + "px";
+                } else {
+                    navbar_sticky.classList.remove("sticky");
+                    document.body.style.paddingTop = "0";
+                }
+            }
+        </script>

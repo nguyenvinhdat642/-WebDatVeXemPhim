@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin/Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="management.css" />
+</head>
+
+<body>
+    <div class="grid grid-sections">
+        <section class="flex-column management-nav">
+            <ion-icon class="logo" name="film-outline"></ion-icon>
+            <nav class="vertical-nav">
+                <ul class="flex-column nav-list">
+                    <a href="http://localhost:3000">
+                        <li>Trang Chủ</li>
+                    </a>
+                    <a href="/Movie">
+                        <li>Phim</li>
+                    </a>
+                    <a href="/Premiere">
+                        <li>Suất chiếu</li>
+                    </a>
+                    <a href="/Genre">
+                        <li>Thể Loại</li>
+                    </a>
+                    <a href="/Service">
+                        <li>Dịch Vụ</li>
+                    </a>
+                    <a href="/User">
+                        <li>Người Dùng</li>
+                    </a>
+                    <a href="/revenue">
+                        <li>Doanh thu</li>
+                    </a>
+                </ul>
+            </nav>
+        </section>
+        <section class="content-section">
+            <nav class="content-header">
+                <h1 class="content-name">Service Management</h1>
+                <div class="center-vertical icons-group">
+                    <a href="#">
+                        <ion-icon name="notifications-outline"></ion-icon>
+                    </a>
+                    <a href="../profile.html">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </a>
+                    <a class="nav-logout" href="../logout.php">Admin</a>
+                </div>
+            </nav>
+
+            <button class="btn open-btn center-vertical" onclick="openForm()">
+                <ion-icon name="add-outline"></ion-icon><span>Add New</span>
+            </button>
+            <div class="add-form-popup" id="inputForm">
+                <form method="POST" action="/Service/add" class="form-container">
+                    <h2 class="popup-heading">Add Service</h2>
+                    <label for="id">Mã Dịch vụ</label>
+                    <input type="text" placeholder="Nhập Mã Dịch Vụ" name="MaDichVu" required />
+                    <label for="name">Combo</label>
+                    <input type="text" placeholder="Nhập tên combo" name="Combo" required />
+                    <label for="information">Giá Tiền</label>
+                    <input type="text" placeholder="Nhập giá tiền" name="GiaTien" required />
+                    <button type="submit" class="btn popup-btn">Add</button>
+                    <button type="button" class="btn popup-btn close-btn" onclick="closeForm()">
+                        Close
+                    </button>
+                </form>
+            </div>
+
+            <table class="movie-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>ID Service</th>
+                        <th>Name Service</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% service.forEach((m, index) => { %>
+
+                        <tr>
+                            <td>
+                                <%= (index + 1) %>
+                            </td>
+                            <td>
+                                <%= m.MaDichVu %>
+                            </td>
+                            <td>
+                                <%= m.Combo %>
+                            </td>
+                            <td>
+                                <%= m.GiaTien %>
+                            </td>
+                            <td class="actions">
+                                <button class="icon-btn btn-delete">
+                                    <a style="color: #000" href="/Service/delete/<%= m.MaDichVu %>">
+                                        <ion-icon name="close-circle-outline"></ion-icon>
+                                    </a>
+                                </button>
+                                <button class="icon-btn btn-edit">
+                                    <a style="color: #000" href="/Service/edit/<%= m.MaDichVu %>">
+                                        <ion-icon name="hammer-outline"></ion-icon>
+                                    </a>
+                                </button>
+                            </td>
+                        </tr>
+                        <%  }) %>
+                </tbody>
+            </table>
+            <!-- <div class="pagination">
+          <a href="#" class="pagi-prev">Prev</a>
+          <a href="#" class="active pagi-el">1</a>
+          <a href="#" class="pagi-el">2</a>
+          <a href="#" class="pagi-el">3</a>
+          <a href="#" class="pagi-el">4</a>
+          <a href="#" class="pagi-el">5</a>
+          <a href="#" class="pagi-next">Next</a>
+        </div> -->
+        </section>
+    </div>
+    <script src="management.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

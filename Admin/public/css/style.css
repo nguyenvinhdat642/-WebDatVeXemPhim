@@ -1,0 +1,191 @@
+/* HERO SECTION */
+
+.hero-section {
+    height: 90vh;
+    background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url("../images/hero-img.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-btn {
+    text-align: center;
+    width: 50%;
+}
+
+
+/* REASONS SECTION */
+
+.cards {
+    gap: 96px;
+}
+
+.card-text {
+    align-items: center;
+}
+
+.card-img {
+    background-size: cover;
+    background-position: center;
+    height: 35rem;
+    width: 30rem;
+}
+
+.card:nth-of-type(1) .card-img {
+    background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/reasons-img-1.jpg");
+}
+
+.card:nth-of-type(2) .card-img {
+    background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/reasons-img-2.jpg");
+}
+
+.card:nth-of-type(3) .card-img {
+    background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/reasons-img-3.jpg");
+}
+
+
+/* GALLERY SLYLING */
+
+.gallery-img {
+    width: 80%;
+    border-radius: 3px;
+}
+
+.pricing-plan {
+    text-align: center;
+    padding: 3.2rem 4.8rem;
+    border-radius: 5px;
+}
+
+.pricing-plan-primary {
+    justify-self: start;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.pricing-plan-secondary {
+    justify-self: end;
+    border: 2px solid #999;
+}
+
+.plan-title .subheading {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.plan-price {
+    font-size: 6.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.plan-text {
+    font-size: 1.6rem;
+    color: #999;
+    margin-bottom: 3.2rem;
+}
+
+.plan-content-list {
+    gap: 2.4rem;
+    margin-bottom: 4.8rem;
+}
+
+.plan-content-list li {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-icon {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    color: #e03131;
+    margin-right: 0.4rem;
+}
+
+.pricing-plan-secondary .subheading {
+    color: #999;
+}
+
+.pricing-plan-secondary .btn:link,
+.btn:visited {
+    color: #fff;
+    background-color: #999;
+}
+
+.pricing-plan-secondary .btn:hover,
+.btn:active {
+    color: #fff;
+    background-color: #777;
+}
+
+
+/* Reset các định dạng mặc định của trình duyệt */
+
+body,
+form,
+input,
+textarea {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Căn giữa phần nội dung */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+
+/* Phần biểu mẫu chỉnh sửa */
+
+form {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Các nhãn và đầu vào */
+
+label,
+input,
+textarea {
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

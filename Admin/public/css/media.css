@@ -1,0 +1,230 @@
+/* RESPONSIVE */
+/* BELOW 960px */
+@media (max-width: 60em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  /* LANDING */
+  .gallery-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-images img:last-of-type {
+    display: none;
+  }
+
+  .pricing-plans {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-plan-primary,
+  .pricing-plan-secondary {
+    justify-self: center;
+  }
+
+  /*  */
+
+  /* SIGNUP */
+  .form-box .pricing-plans {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-box {
+    min-width: 50%;
+  }
+
+  /* MAIN PAGE FEATURE VIDEO */
+  .featured-movie-section {
+    grid-template-columns: 1fr;
+    align-content: end;
+  }
+
+  .featured-content {
+    padding: 0 8rem 12.8rem 8rem;
+  }
+  /*  */
+
+  /* PROFILE PAGE */
+  .profile-section {
+    height: auto;
+  }
+
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+
+  .user {
+    justify-self: center;
+  }
+
+  .user-info-box {
+    justify-self: center;
+    grid-row: auto;
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .user-info {
+    column-gap: 3.6rem;
+  }
+  /*  */
+
+  /* POPULAR, SEACH,... VIDEO GRID LIST */
+  .grid-search-content {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  /*  */
+}
+/* ---------------------------- */
+
+/* BELOW 690px */
+@media (max-width: 43em) {
+  html {
+    font-size: 50%;
+  }
+
+  /* .btn {
+    padding: 1.2rem 1.6rem;
+  } */
+
+  /* LANDING */
+  .container {
+    max-width: 70rem;
+  }
+
+  .grid {
+    row-gap: 3.2rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  /*  */
+
+  /* SIGNUP */
+  .form-box {
+    min-width: 60%;
+    padding: 2.4rem 4.8rem 4.8rem 4.8rem;
+  }
+
+  /* MAIN NAVIGATION BAR */
+  header {
+    padding: 0 2.4rem;
+  }
+  .main-header {
+    padding-top: 1.2rem;
+  }
+
+  .main-nav {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+
+    font-size: 2.6rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-top: 12.8rem;
+
+    flex-direction: column;
+    gap: 8rem;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .icon-open-menu {
+    display: block;
+  }
+
+  .icon-close-menu {
+    display: none;
+  }
+
+  .nav-open .main-nav {
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-open-menu {
+    display: none;
+  }
+
+  .nav-open .icon-close-menu {
+    display: block;
+  }
+
+  .nav-open .logo {
+    margin-bottom: 3rem;
+  }
+  /*  */
+
+  /* POPULAR, SEACH,... VIDEO GRID LIST */
+  .grid-search-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /*  */
+}
+/* ---------------------------- */
+
+/* BELOW 480px */
+@media (max-width: 30em) {
+  html {
+    font-size: 43.75%;
+  }
+
+  /* LANDING */
+  .grid.grid--footer {
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  }
+
+  .media-col {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .social-icon {
+    font-size: 2.4rem;
+  }
+  /*  */
+
+  /* SIGNUP */
+  .form-box {
+    min-width: 70%;
+  }
+  .btn {
+    font-size: 1.5rem;
+  }
+
+  /*  */
+
+  /* MAIN NAVIGATION BAR */
+  .main-nav {
+    width: 80%;
+  }
+  /*  */
+
+  /* POPULAR, SEACH,... VIDEO GRID LIST */
+  .grid-search-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-card {
+    width: 90%;
+  }
+  /*  */
+
+  /* DETAILED MOVIE */
+  .rating {
+    display: block;
+  }
+
+  .rating-form {
+    margin-bottom: 0.4rem;
+  }
+}

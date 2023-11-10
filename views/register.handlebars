@@ -1,0 +1,30 @@
+<h3 class="text-center my-5 text-light">Đăng ký</h3>
+  <div class="container">
+    <form method="POST" action="/account/register">
+    {{!-- Name input --}}
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example1">Họ và tên</label>
+    <input name="name" type="text" id="form2Example1" class="form-control" value="{{flash.name}}"/>
+  </div>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example1">Email</label>
+    <input name = "email" type="email" id="form2Example1" class="form-control" value="{{flash.email}}"/>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example2">Mật khẩu</label>
+    <input name="pwd" type="password" id="form2Example2" class="form-control" />
+  </div>
+<!-- Flash message -->
+  {{#if flash}}
+  <div id="flash-alert" class="alert alert-success text-center w-25 mx-auto my-3">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <span>{{flash.error}}</span>
+  </div>
+  {{/if}}
+  <!-- Submit button -->
+  <button type="submit"style="background:red;" class="btn btn-block mb-4">Đăng ký</button>
+</form>
+  </div>

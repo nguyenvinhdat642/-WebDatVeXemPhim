@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quản trị Dịch Vụ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #23272b;
+            color: #f8f9fa;
+        }
+        
+        h1 {
+            color: #f8f9fa;
+        }
+        
+        .form-group label {
+            color: #f8f9fa;
+        }
+        
+        .form-control {
+            background-color: #343a40;
+            color: #f8f9fa;
+            border-color: #343a40;
+        }
+        
+        .form-control:focus {
+            background-color: #495057;
+            color: #f8f9fa;
+            border-color: #343a40;
+            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+        }
+        
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #f8f9fa;
+            border-color: #007bff;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+            color: #f8f9fa;
+            border-color: #0062cc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Chỉnh sửa thông tin Dịch Vụ</h1>
+        <form action="/Service/edit" method="POST">
+            <input type="hidden" id="MaDichVu" name="MaDichVu" value="<%= service.MaDichVu %>">
+            <!-- Thêm trường ẩn để chứa giá trị của Id -->
+            <div class="form-group">
+                <label for="TenKhachHang">Combo:</label>
+                <input type="text" id="Combo" name="Combo" value="<%= service.Combo %>" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="ThoiLuong">Loại Khách Hàng:</label>
+                <input type="text" id="LoaiKhachHang" name="LoaiKhachHang" value="<%= service.GiaTien %>" required class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Lưu</button>
+            <!-- Thêm button để gửi form kèm Id -->
+        </form>
+    </div>
+
+</body>
+
+</html>

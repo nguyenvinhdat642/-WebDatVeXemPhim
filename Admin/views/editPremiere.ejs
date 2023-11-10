@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quản trị xuất phim</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #23272b;
+            color: #f8f9fa;
+        }
+        
+        h1 {
+            color: #f8f9fa;
+        }
+        
+        .form-group label {
+            color: #f8f9fa;
+        }
+        
+        .form-control {
+            background-color: #343a40;
+            color: #f8f9fa;
+            border-color: #343a40;
+        }
+        
+        .form-control:focus {
+            background-color: #495057;
+            color: #f8f9fa;
+            border-color: #343a40;
+            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+        }
+        
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #f8f9fa;
+            border-color: #007bff;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+            color: #f8f9fa;
+            border-color: #0062cc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Chỉnh sửa thông tin xuất chiếu</h1>
+        <form action="/premiere/edit" method="POST">
+            <div class="form-group">
+                <label for="MaSuatPhim">Suất phim:</label>
+                <input type="text" id="MaSuatPhim" name="MaSuatPhim" value="<%= premiere.MaSuatPhim %>" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="GioiHanDoTuoi">Giới hạn độ tuổi:</label>
+                <input type="number" id="GioiHanDoTuoi" name="GioiHanDoTuoi" value="<%= premiere.GioiHanDoTuoi %>" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Gia">Giá:</label>
+                <input type="number" id="Gia" name="Gia" value="<%= premiere.Gia %>" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Ngay">Ngày chiếu:</label>
+                <input type="date" id="Ngay" name="Ngay" value="<%= premiere.Ngay %>" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Gio">giờ chiếu:</label>
+                <input type="text" id="Gio" name="Gio" value="<%= premiere.Gio %>" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="TenPhongChieu">Phòng chiếu:</label>
+                <input type="text" id="TenPhongChieu" name="TenPhongChieu" value="<%= premiere.TenPhongChieu %>" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="MaPhim">Mã phim:</label>
+                <input type="text" id="MaPhim" name="MaPhim" value="<%= premiere.MaPhim %>" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="MaCumRap">Mã cụm rạp:</label>
+                <input type="text" id="MaCumRap" name="MaCumRap" value="<%= premiere.MaCumRap %>" required class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Lưu</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

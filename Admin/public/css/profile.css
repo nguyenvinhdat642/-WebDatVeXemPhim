@@ -1,0 +1,98 @@
+.profile-section {
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  background-image: linear-gradient(
+    to top,
+    #af0000,
+    #870016,
+    #5c081b,
+    #310d16,
+    #000000
+  );
+}
+
+.profile-container {
+  height: 80%;
+  width: 100%;
+  text-align: center;
+  align-items: start;
+  color: #fff;
+  background-color: #000;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 15rem;
+  row-gap: 4.8rem;
+
+  position: relative;
+  padding: 9.6rem 4.8rem 4.8rem 4.8rem;
+}
+
+.user {
+  justify-self: end;
+  grid-row: span 2;
+}
+
+.img-avatar {
+  height: 20rem;
+  width: 20rem;
+  margin-bottom: 2.4rem;
+  border: 0.2rem solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user-name {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.user button {
+  width: 100%;
+}
+
+.user-info-box {
+  min-width: 80%;
+  padding-bottom: 3.2rem;
+  border-bottom: 2px solid #999;
+
+  grid-column: 2;
+  justify-self: start;
+}
+
+.user-info-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: start;
+  margin-bottom: 3.2rem;
+}
+
+.user-info {
+  align-self: center;
+  justify-self: start;
+  grid-column: 2;
+  column-gap: 15rem;
+}
+
+.user-info div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 2.4rem;
+}
+
+.user-info span {
+  font-size: 2rem;
+}
+
+.info-titles {
+  justify-self: start;
+  padding-left: 2.4rem;
+}
+
+.info-titles span {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #999;
+}

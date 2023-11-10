@@ -1,0 +1,239 @@
+.form-page {
+  height: 100vh;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../images/login/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.form-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 3.2rem 6.4rem 6.4rem 6.4rem;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.714);
+}
+
+.form-header {
+  margin-bottom: 3.2rem;
+}
+
+.form-heading {
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+.form-input {
+  margin-bottom: 3rem;
+}
+
+.form-input input {
+  font: inherit;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.714);
+  border: 0.1rem solid rgba(153, 153, 153, 0.705);
+  border-radius: 3px;
+
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+}
+
+.form-input input:focus {
+  outline: none;
+  border: 1px solid #e03131;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  font-size: 1.8rem;
+  color: #999;
+  margin-bottom: 0.4rem;
+}
+
+.form-help {
+  display: flex;
+  gap: 4.8rem;
+
+  margin-bottom: 6.4rem;
+}
+
+.form-help label,
+a {
+  font-size: 1.4rem;
+  color: #999;
+}
+
+.form-radio-groups {
+  gap: 2.4rem;
+}
+
+.form-group {
+  gap: 0.4rem;
+}
+
+/* Custom checkbox */
+input[type="checkbox"] {
+  appearance: none;
+
+  /* Styling box */
+  font: inherit;
+  color: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.175rem solid currentColor;
+  border-radius: 3px;
+  transform: translateY(-0.08rem);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]:checked {
+  /* Styling box */
+  font: inherit;
+  color: #e03131;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #e03131;
+  border-radius: 3px;
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 0.5rem 0.5rem #fff;
+
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+/*  */
+
+.link-forgot:hover,
+.link-forgot:active {
+  color: #b32727;
+}
+
+.btn-login {
+  width: 100%;
+}
+
+.signup-step {
+  /* position: absolute; */
+  left: -100%;
+}
+
+.active {
+  left: 50%;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  margin-bottom: 2.4rem;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #b32727;
+
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+}
+
+.form-btn-group {
+  display: flex;
+
+  margin-top: 4.8rem;
+}
+
+.btn-next {
+  margin-left: auto;
+}
+
+.signup-plan input {
+  display: block;
+}
+
+.pricing-plan {
+  padding: 3.2rem 3.2rem;
+}
+
+.signup-form .subheading {
+  font-weight: 700;
+  font-size: 2rem;
+
+  margin-bottom: 1.6rem;
+}
+
+.signup-form .plan-price {
+  font-size: 3.6rem;
+  font-weight: 700;
+
+  margin-bottom: 3.2rem;
+}
+
+.pricing-radio {
+  margin: 0 auto;
+}
+
+/* Customize radio button */
+input[type="radio"] {
+  appearance: none;
+
+  /* Styling box */
+  font: inherit;
+  color: currentColor;
+  width: 2rem;
+  height: 2rem;
+  border: 0.175rem solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.15rem);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1rem 1rem #e03131;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+/*  */
+
+.form-box .description {
+  margin-bottom: 3.2rem;
+}

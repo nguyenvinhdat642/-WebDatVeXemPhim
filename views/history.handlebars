@@ -1,0 +1,39 @@
+
+<div class="container-fluid">
+    <h2 style="margin-top: 10px;">Lịch Sử Mua Vé </h2>
+    <br>
+    <div>
+        <table style="width:100%;">
+            <tr>
+                <th>Mã</th>
+                <th>Tên Phim</th>
+                <th>Tên Chi Nhánh</th>
+                <th>Giờ Chiếu</th>
+                <th>Tên Phòng</th>
+                <th>Ngày Mua</th>
+                <th>Ghế</th>
+                <th>Mã QR</th>
+            </tr>
+            <!-- each -->
+                {{#each danhsachve}}
+                <tr>
+                    <td>{{this.MaDatVe}}</td>
+                    <td >{{this.TenPhim}}</td>
+                    <td>{{this.TenCumRap}}</td>
+                    <td>{{this.Gio}}</td>
+                    <td>{{this.TenPhongChieu}}</td>
+                    <td>{{this.Ngay}}</td>
+                    <td>{{this.Ghe}}</td>
+                    <td><img style="width:100px;height: 100px;" src="https://www.qrcode-gen.com/images/qrcode-default.png"></td>
+                </tr>
+                {{/each}}
+    
+
+
+        </table>
+
+    </div>
+    <br>
+</div>
+<br>
+<br>
